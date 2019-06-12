@@ -23,6 +23,6 @@ public class ControllerTests {
     public void testReverse() {
         Controller controller = new Controller();
 
-        assertEquals("world Hello", controller.reverse("Hello world"));
+        assertEquals("world Hello", controller.getReverse("Hello world"));
     }
 }

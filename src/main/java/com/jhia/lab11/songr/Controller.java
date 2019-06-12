@@ -21,4 +21,9 @@ public class Controller {
     public String getCapitalizedString(@PathVariable String param) {
         return param.toUpperCase();
     }
+
+    @GetMapping("reverse/{param}")
+    public String getReverse(@PathVariable String param) {
+        return "eventually it will be reversed";
+    }
 }
