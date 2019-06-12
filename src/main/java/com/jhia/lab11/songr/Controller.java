@@ -2,6 +2,7 @@ package com.jhia.lab11.songr;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
@@ -17,9 +18,10 @@ public class Controller {
         return "Hello, world!";
     }
 
-    @GetMapping("/capitalize/{param}")
-    public String getCapitalizedString(@PathVariable String param) {
-        return param.toUpperCase();
+    //capitalize?uppercase=these are the words to uppercase
+    @GetMapping("/capitalize")
+    public String getCapitalizedString(@RequestParam String sentence) {
+        return sentence.toUpperCase();
     }
 
     @GetMapping("reverse/{param}")
