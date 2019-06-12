@@ -24,6 +24,12 @@ public class Controller {
 
     @GetMapping("reverse/{param}")
     public String getReverse(@PathVariable String param) {
-        return "eventually it will be reversed";
+        String [] strings = param.split(" ");
+        StringBuilder output = new StringBuilder();
+
+        for (int i = strings.length; i > 0; i = i - 1) {
+            output.append(strings[i - 1] + " ");
+        }
+        return output.toString().trim();
     }
 }
