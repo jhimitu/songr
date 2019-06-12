@@ -11,4 +11,11 @@ public class ControllerTests {
 
         assertEquals("Hello, world!", controller.getHelloWorld());
     }
+
+    @Test
+    public void testCapitalizedString() {
+        Controller controller = new Controller();
+
+        assertEquals("HELLO", controller.getCapitalizedString("hello"));
+    }
 }
