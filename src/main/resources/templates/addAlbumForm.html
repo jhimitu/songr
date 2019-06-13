@@ -1,0 +1,22 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Add an Album</title>
+</head>
+<body>
+<h1>Add an Album</h1>
+    <form method="POST" action="/albums">
+        <label>Album Title:</label><input type="text" name="title" id="title"/>
+        <br />
+        <label>Artist: </label><input type="text" name="artist" id="artist"/>
+        <br />
+        <label>Song Count: </label><input type="number" name="songCount" id="songCount"/>
+        <br />
+        <label>Song Length: </label><input type="number" name="length" id="length"/>
+        <br />
+        <label>Image URL: </label><input type="text" name="imageUrl" id="imageUrl"/>
+        <br />
+        <input type="submit" />
+    </form>
+</body>
+</html>
