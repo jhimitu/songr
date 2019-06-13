@@ -5,8 +5,8 @@
     <body>
 <!--    <h1>Hello, <span th:text="${name}"></span>!</h1>-->
     <h1>Hello,
-        <span th:each="${name : ${names}" th:text="${name}">
-            this is a thing
+        <span th:each="name, iterStat : ${names}" th:text="${iterStat.last} ? ${name} : ${name} + ', '">
+            this is a names span
         </span></h1>
     </body>
 </html>
