@@ -4,6 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import java.util.ArrayList;
 
 //Album model
 @Entity
@@ -34,6 +35,7 @@ public class Album {
         this.songCount = songCount;
         this.length = length;
         this.imageUrl = imageUrl;
+        ArrayList<Song> songs = new ArrayList<>();
     }
 
     public long getId() {
@@ -83,4 +85,5 @@ public class Album {
     public void setImageUrl(String imageUrl) {
         this.imageUrl = imageUrl;
     }
+
 }
