@@ -43,7 +43,8 @@ public class SongController {
             songRepository.save(song);
             return new RedirectView("/songs");
         } else {
-            Song song = new Song(title, length, trackNumber, new Album());
+            Album newAlbum = new Album(album);
+            Song song = new Song(title, length, trackNumber, newAlbum);
             songRepository.save(song);
             return new RedirectView("/songs");
         }

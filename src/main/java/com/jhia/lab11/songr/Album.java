@@ -20,8 +20,8 @@ public class Album {
     @OneToMany(mappedBy = "album")
     List<Song> songs;
 
-    public Album() {
-
+    public Album(String title) {
+        this.title = title;
     }
 
     public Album(
