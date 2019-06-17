@@ -35,7 +35,6 @@ public class Album {
         this.songCount = songCount;
         this.length = length;
         this.imageUrl = imageUrl;
-        ArrayList<Song> songs = new ArrayList<>();
     }
 
     public long getId() {
