@@ -25,11 +25,12 @@ public class Song {
         String title,
         int length,
         int trackNumber,
-        String album
+        Album album
     ) {
         this.title = title;
         this.length = length;
         this.trackNumber = trackNumber;
+        this.album = album;
     }
 
     public long getId() {
