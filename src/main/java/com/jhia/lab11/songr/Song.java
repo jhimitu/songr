@@ -1,10 +1,8 @@
 package com.jhia.lab11.songr;
 
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.List;
 
 //Song model
 @Entity
@@ -15,7 +13,9 @@ public class Song {
     String title;
     int length;
     int trackNumber;
-    String album;
+
+    @ManyToOne
+    Album album;
 
     public Song() {
 
@@ -30,7 +30,6 @@ public class Song {
         this.title = title;
         this.length = length;
         this.trackNumber = trackNumber;
-        this.album = album;
     }
 
     public long getId() {
@@ -65,11 +64,11 @@ public class Song {
         this.trackNumber = trackNumber;
     }
 
-    public String getAlbum() {
+    public Album getAlbum() {
         return album;
     }
 
-    public void setAlbum(String album) {
+    public void setAlbum(Album album) {
         this.album = album;
     }
 }

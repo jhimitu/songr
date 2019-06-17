@@ -1,10 +1,8 @@
 package com.jhia.lab11.songr;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.ArrayList;
+import java.util.List;
 
 //Album model
 @Entity
@@ -18,6 +16,9 @@ public class Album {
     public int songCount;
     public int length;
     public String imageUrl;
+
+    @OneToMany(mappedBy = "album")
+    List<Song> songs;
 
     public Album() {
 
@@ -85,4 +86,7 @@ public class Album {
         this.imageUrl = imageUrl;
     }
 
+    public List<Song> getSongs() {
+        return songs;
+    }
 }
